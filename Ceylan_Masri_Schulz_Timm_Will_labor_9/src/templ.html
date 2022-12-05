@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>A11y</title>
+    <!-- Sofern die linke Seite zu schmal ist,
+         im <style> Kommentar entfernen und
+         Wert der Variable erhöhen. -->
+    <style>
+        /* ---------------------- here -----------*/
+        /*:root {--sidebar-width: 15ch !important; /* <-- */
+    </style>
+</head>
+<body>
+    <a href="#main" id="jumper">Zum Inhalt</a>
+    <div class="centered">
+
+    <header>
+        <h1>A11y (Accessibility)</h1>
+    </header>
+    <aside class="table-of-contents">
+        
+        <div class="aside-inside">
+
+        <nav>
+            <!-- links to other topics of our website -->
+            <h2>Themen</h2>
+            <ul>
+                <li><a href="farbenblindheit.html">Farbenblindheit</a></li>
+                <li><a href="sehschwaeche.html">Sehschwäche</a>
+                <li><a href="screenreader.html">Screenreader & Motorische Einschränkungen</a></li>
+                <li><a href="kognitives.html">Kognitive Einschränkungen</a></li>
+                <li><a href="hörprobleme.html">Hörprobleme</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <!-- Zum Ändern oder Setzen einer 
+            (Unter-)überschrift muss man folgendes anfassen:
+            - im aside nav von Inhalt
+                1. Inhalt <a>
+                2. Inhalt href="#" im <a>
+            - in der section
+                3. id="" in <section>
+                4. <h3> oder <h4> in <section> -->
+            <!-- links to various sections -->
+            <h2>Inhalt</h2>
+            <ol>
+                <li><a href="#Einführung">Einführung</a></li>
+                <li><a href="#Teil2">Teil 2</a>
+                    <ol>
+                        <li><a href="#Teil_2.1">Teil 2.1</a></li>
+                        <li><a href="#Teil_2.2">Teil 2.2</a></li>
+                    </ol></li>
+                <li><a href="#Teil3">Teil 3</a></li>
+                <li><a href="#Siehe_auch">Siehe auch</a></li>
+            </ol>
+        </nav>
+
+        </div>
+    </aside>
+    <main id="main">
+        <article>
+            <h2>Überschrift des Artikels</h2>
+            <section id="Einführung">
+                <h3>Einführung</h3>
+                <p>
+                    Lorem ipsum dolor sit amet <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">nice link</a> consectetur adipisicing elit. Consequatur, consectetur aliquam fugit totam dolores atque, error recusandae debitis doloremque cum veritatis distinctio adipisci accusantium natus sapiente iusto quia! Consequuntur, aliquid.
+                </p><p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto sapiente doloribus fugit autem assumenda quibusdam accusantium dolore veritatis sit corrupti unde debitis asperiores dolorum, obcaecati aliquam neque amet voluptatum.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus perspiciatis repellat impedit libero sit maiores vero tenetur debitis ipsum! Minus veniam necessitatibus consequuntur quidem pariatur numquam perspiciatis officia molestias veritatis.
+                    
+                </p><p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magni delectus illum ratione culpa, excepturi minus laborum ex officiis ut provident assumenda dolore aliquid reprehenderit, placeat quibusdam obcaecati a explicabo.
+                </p>
+            </section>
+            <section id="Teil2">
+                <h3>Teil 2</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi repellat at consequuntur incidunt a, dignissimos error eum id possimus cupiditate deleniti officia distinctio sint iste consectetur reprehenderit perferendis ipsum labore!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum perspiciatis optio nihil ea corrupti! Hic optio quos repudiandae itaque soluta voluptates rerum veniam, amet et asperiores rem recusandae iusto provident?
+                </p>
+                <section id="Teil_2.1">
+                <h4>Teil 2.1</h4>
+                <figure>
+                    <img src="img/lösch_mich.svg" 
+                    alt="something useful"
+                    width="100%">
+                    <figcaption>
+                        Ein super Bild
+                    </figcaption>
+                </figure>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum maiores provident ex, blanditiis totam aspernatur veritatis tempora optio similique tenetur cumque dolorem iure deleniti quod quasi voluptatibus id deserunt.
+                    </p>
+                </section>
+                <section id="Teil_2.2">
+                    <h4>Teil 2.2</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum corporis voluptatem sequi odit nobis? Praesentium voluptas quisquam doloribus minima alias sint totam distinctio <q>quas exercitationem</q> voluptatem eum, eveniet blanditiis. Illum.
+                    </p>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, rem, quasi qui corporis laudantium temporibus voluptates explicabo sunt voluptatem neque quidem earum et quam dolorem fuga accusantium aperiam deleniti inventore.
+                        <br>~ tolle Person
+                    </blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis enim non voluptatem, mollitia cumque soluta fugit eveniet officia obcaecati neque quae unde beatae esse repellat ipsa odit inventore quo itaque!
+                    </p>
+                </section>
+            </section>
+            <section id="Teil3">
+                <h3>Teil 3</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi repellat at consequuntur incidunt a, dignissimos error eum id possimus cupiditate deleniti officia distinctio sint iste consectetur reprehenderit perferendis ipsum labore!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere porro commodi nostrum unde nesciunt alias vero saepe odit vitae at, quia sint consectetur ipsum fugit eaque error aspernatur nobis inventore!
+                </p><p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum cum quaerat saepe dicta quasi consectetur provident laborum, praesentium excepturi veniam ipsum animi est nam enim reiciendis reprehenderit! Necessitatibus, beatae!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque consectetur, facilis fugit dolore deserunt perferendis soluta in obcaecati eligendi exercitationem dolorum sunt illo repudiandae suscipit? Impedit ad saepe at esse.
+                </p>
+
+                <!-- ********************
+                     HOW TO show examples
+                     ******************** -->
+                <!-- in a text -->
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci, impedit hic quo minima cumque autem amet dolor animi pariatur voluptas est illum. Quidem libero, distinctio neque eaque <a href="src/example1">an example</a> aliquid amet?
+                </p>
+
+                <!-- embed example sites-->
+                <figure>
+                    <embed src="templ.html" style="width: 100%; height: 500px; margin: 0;">
+                    <figcaption>
+                        Klassisches Beispiel einer guten Website.
+                    </figcaption>
+                </figure>
+                <!-- link to examples in a list -->
+                <nav><ul>
+                    <li>I forgot (no example)</li>
+                    <li><a href="src/example100">hmm</a></li>
+                    <li><a href="src/example101">idk</a></li>
+                </ul></nav>
+                <!-- different techniques possible -->
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe deserunt numquam corporis vero, mollitia veritatis consequatur voluptas distinctio dicta tempore natus nisi similique illo et reiciendis eveniet suscipit fuga. Tempora?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit maxime quibusdam molestiae sed, voluptatem laborum omnis? Accusamus, cumque! Delectus soluta totam odio repellat ullam laudantium nobis obcaecati magni excepturi quidem.
+                </p><p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptatibus? Tempore corporis animi maxime commodi aperiam quibusdam ad suscipit enim quas aliquid cumque quod, minima alias cupiditate, possimus assumenda asperiores?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat beatae error officia quos, porro optio at tempora assumenda mollitia doloremque laudantium nam pariatur, aperiam similique omnis corporis molestias quaerat laborum!
+                </p><p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sint ducimus consequuntur veniam quidem non ullam voluptatibus quibusdam ipsum praesentium error distinctio omnis, architecto quo illo nemo esse vel animi.
+                </p>
+            </section>
+            <section id="Siehe_auch">
+                <!-- further links, please keep it short -->
+                <h3>Siehe auch</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://example.com">Reader1</a></li>
+                        <li><a href="https://example.org">Cool Project</a></li>
+                        <li><a href="https://example.com">No Idea</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </article>
+
+    </main>
+    <footer>
+        <section>
+            <h2>Impressum</h2>
+            <p>A11y-Gruppe<br>Musterweg 12,<br>12345 Musterstadt</p>
+    </footer>
+
+    </div>
+</body>
+</html>

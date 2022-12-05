@@ -1,0 +1,144 @@
+/********************
+ *** MACRO DESIGN ***
+ ********************/
+
+/* general style and variables */
+:root {
+    font-family: Noto-Sans, sans-serif;
+    --sidebar-width: 20ch;
+}
+
+/* layout desktop-version */
+@media (width > 665px) {
+    /* center our site using flexbox */
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    /* site layout */
+    .centered {
+        display: grid;
+        /* --------------- header | main+aside | footer */
+        grid-template-rows: auto       1fr        auto;
+        /*** two column design ***/
+        /* ------------------  /--------nav-------\| everything else */
+        grid-template-columns: var(--sidebar-width) minmax(auto, 60ch);
+        grid-template-areas:
+        /* "." means nothing placed here */
+            ". h"
+            "c m"
+            ". f";
+    }
+    header {grid-area: h;}
+    .table-of-contents {grid-area: c;}
+    main {grid-area: m;}
+    footer {grid-area: f;}
+}
+@media (width > 940px) {
+    .centered {
+        /*** three column design to center the central column ***/
+        /* ------------------  /--------nav-------\| everything else  | mirror of nav to have content in the center */
+        grid-template-columns: var(--sidebar-width) minmax(auto, 60ch)   var(--sidebar-width);
+        grid-template-areas:
+        /* "." means nothing placed here */
+        /* using a empty row on the left to have the center row in the center */
+            ". h ."
+            "c m ."
+            ". f .";
+    }
+}
+
+/********************
+ *** MICRO DESIGN ***
+ ********************/
+
+/* ASIDE: table of contents design */
+
+    /* a bit less padding on the left 
+    and no margin on the top */
+.table-of-contents nav ol, .table-of-contents nav ul {
+    padding-left: 2ch;
+    margin-top: 0;
+}
+@media (width > 665px) {
+    /* no numbers 
+    .table-of-contents > nav > ol > li {
+        list-style: none;
+    }
+    .table-of-contents > nav > ol {
+        padding-left: 0;
+    }*/
+    /* stick on top when scrolling down */
+        /* aside-inside class is a div which spans both navs,
+           so the nav don't overlap each other when scrolling down. */
+    .aside-inside {
+        position: sticky;
+        top: 2vh;
+    }
+}
+    /* a visual distintion from header */
+.table-of-contents {
+    border-top: black solid 1px;
+}
+.table-of-contents h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (width > 665px) {
+    .table-of-contents {
+        border-top: none;
+    }
+    .table-of-contents h2 {
+        margin-top: 19.92px;
+    }
+}
+
+/* MAIN design */
+main {
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+}
+
+/* FOOTER design */
+footer h2, footer p {
+    font-size: 16px;
+    padding-bottom: 0%;
+}
+
+/********************
+ *** OTHER DESIGN ***
+ ********************/
+
+/* border around embeded elements */
+img, video, embed, iframe {
+    border: black solid 1px;
+    padding: 2%;
+}
+
+/* make quotes italic */
+q, blockquote {
+    font-style: italic;
+}
+
+/****************
+ *** FEATURES ***
+ ****************/
+
+/* hide skip to main, by placing it far away */
+#jumper {
+    position: absolute;
+    left: -6666px;
+}
+#jumper:focus {
+    position: relative;
+    left: 0px;
+}
+
+/**************
+ *** QUIRKS ***
+ **************/
+
+/* CSS-Reset */
+* {
+    box-sizing: border-box;
+}
